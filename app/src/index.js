@@ -65,3 +65,8 @@ root.render(
 
 </div>
 );
+
+
+//step 1: git add --all
+//step 2: git commit -m "Ex" (add a message in the quotes)
+//step 3: git push --set-upstream origin main (use this to push things to github)
