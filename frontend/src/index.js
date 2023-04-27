@@ -9,20 +9,6 @@ root.render(
 </React.StrictMode>
 );
 
-root.render(
-<div>
-    <h1>Get Method.</h1>
-    <button onclick="getMethod()">Show All users</button>
-
-    <h1>Post Method. </h1>
-    <button onclick="postMethod()">Post user</button>
-
-    <h1>DELETE Method .</h1>
-    <button onclick="deleteMethod()">Delete</button>
-
-</div>
-);
-
 
 //step 1: git add --all
 //step 2: git commit -m "Ex" (add a message in the quotes)
