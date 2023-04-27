@@ -18,7 +18,7 @@ useNewUrlParser: true,
 useUnifiedTopology: true,
 }
 );
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 const host = "localhost";
 
 app.get("/", async (req, resp) => {

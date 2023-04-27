@@ -6,7 +6,7 @@ function App() {
   const [viewer2, setViewer2] = useState(false);
   
   function getAllProducts() {
-    fetch("http://localhost:4000/")
+    fetch("http://localhost:3000/")
       .then((response) => response.json())
       .then((data) => {
         console.log("Show Catalog of Products :");
@@ -21,7 +21,7 @@ function App() {
   function getOneProduct(id) {
     console.log(id);
     if (id >= 1 && id <= 20) {
-      fetch("http://localhost:4000/" + id)
+      fetch("http://localhost:3000/" + id)
         .then((response) => response.json())
         .then((data) => {
           console.log("Show one product :", id);
@@ -71,8 +71,8 @@ return (
       {viewer2 && <div>Product: {showOneItem}</div>}
       <hr></hr>
 
-      
-    <h1>Get Method.</h1>
+
+    <h1>Get Method</h1>
     <button onclick="getMethod()">Show All users</button>
 
     <h1>Post Method. </h1>

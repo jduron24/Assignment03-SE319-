@@ -5,7 +5,7 @@
         "price": 10,
         "description": "Flakes that have been frosted",
         "category": "Kellog",
-        "image": "https://m.media-amazon.com/images/I/81Jv2VHEfTL._AC_UF1000,1000_QL80_.jpg",  
+        "image": "http://127.0.0.1:3000/images/image01.jpg",  
         "rating": 5
     },
     {
@@ -14,7 +14,7 @@
         "price": 6,
         "description": "Bunches of honey cuh",
         "category": "BrandP",
-        "image": "https://m.media-amazon.com/images/I/619FCjwPvYL._AC_UF894,1000_QL80_.jpg",  
+        "image": "http://127.0.0.1:3000/images/image02.jpg",  
         "rating": 4
     },
     {
@@ -23,7 +23,7 @@
         "price": 3,
         "description": "brans of raisin",
         "category": "Quaker",
-        "image": "https://i5.walmartimages.com/asr/1a91e451-fdef-4851-8ed3-10473e9ca476.667c2ea6dd8aedeaa6e0e9e9317456a6.jpeg",  
+        "image": "http://127.0.0.1:3000/images/image03.jpg",  
         "rating": 3
     }
 
