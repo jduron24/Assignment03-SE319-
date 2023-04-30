@@ -104,21 +104,30 @@ function App() {
     }
   }
   const showOneItem = oneProduct.map((el) => (
-    <div key={el._id}>
+    <div class="card"key={el._id}>
+      <div class="card-body">
       <img src={el.image} width={30} /> <br />
       Title: {el.title} <br />
       Category: {el.category} <br />
       Price: {el.price} <br />
       Rate :{el.rating.rate} and Count:{el.rating.count} <br />
-    </div>
+      </div>
+      </div>
   ));
   const showAllItems = product.map((el) => (
-    <div key={el._id}>
+    <div class="apple" key={el._id}>
+
+      <div class="card" >
+      <div class="card-body">
       <img src={el.image} width={30} /> <br />
       Title: {el.title} <br />
       Category: {el.category} <br />
       Price: {el.price} <br />
       Rate :{el.rating.rate} and Count:{el.rating.count} <br />
+      </div>
+      </div>
+
+
     </div>
   ));
 
@@ -144,7 +153,7 @@ function App() {
   }
   function deleteOneProduct(deleteid) {
     console.log("Product to delete :", deleteid);
-    fetch("http://localhost:4000/delete/", {
+    fetch("http://localhost:3000/delete/", {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ _id: deleteid }),
@@ -163,21 +172,29 @@ function App() {
   }
 
   return (
-    <div>
-        <h1>Catalog of Products</h1>
-        <button onClick={() => getAllProducts()}>Show All products</button>
-
+    <div id="font">
+      <div>
+        <h1 class="center">Catalog of Products</h1>
+      </div>
+        
+        <button  class="btn btn-primary" onClick={() => getAllProducts()}>Show All products</button>
         <input type="text" id="message" name="message" placeholder="id" onChange={(e) => getOneProduct(e.target.value)} />
+        
 
-        <h1>Show all available Products.</h1>
+        <h1 class="center">Show all available Products.</h1>
+        
+        <div class="center">
+
         <hr></hr>
         {viewer1 && <div>Products {showAllItems}</div>}
         <hr></hr>
-        <h1>Show one Product by Id:</h1>
+        <h1 font="id">Show one Product by Id:</h1>
         {viewer2 && <div>Product: {showOneItem}</div>}
         <hr></hr>
+        </div>
+
         <div>
-            <h3>Add a new product :</h3>
+            <h3 id="font">Add a new product :</h3>
             <form action="">
             <div class="form-group">
             <label>ID</label>
@@ -191,11 +208,27 @@ function App() {
               <label>Price</label>
                 <input type="number" class="form-control" placeholder="price?" name="price" value={addNewProduct.price} onChange={handleChange} />
               </div>
-                <input type="text" placeholder="description?" name="description" value={addNewProduct.description} onChange={handleChange} />
-                <input type="text" placeholder="category?" name="category" value={addNewProduct.category} onChange={handleChange} />
-                <input type="text" placeholder="image?" name="image" value={addNewProduct.image} onChange={handleChange} />
-                <input type="number" placeholder="rate?" name="rate" value={addNewProduct.rating.rate} onChange={handleChange} />
-                <input type="number" placeholder="count?" name="count" value={addNewProduct.rating.count} onChange={handleChange} />
+              <div class="form-group">
+              <label>Description</label>
+                <input type="text"  class="form-control" placeholder="description?" name="description" value={addNewProduct.description} onChange={handleChange} />
+              </div>
+              <div class="form-group">
+              <label>Category</label>
+                <input type="text"  class="form-control" placeholder="category?" name="category" value={addNewProduct.category} onChange={handleChange} />
+              </div>
+
+              <div class="form-group">
+              <label>Image</label>
+                <input type="text" class="form-control" placeholder="image?" name="image" value={addNewProduct.image} onChange={handleChange} />
+              </div>
+              <div class="form-group">
+              <label>Rate</label>
+                <input type="number" class="form-control"  placeholder="rate?" name="rate" value={addNewProduct.rating.rate} onChange={handleChange} />
+              </div>
+              <div class="form-group">
+              <label>Count</label>
+                <input type="number" class="form-control" placeholder="count?" name="count" value={addNewProduct.rating.count} onChange={handleChange} />
+              </div>
                 <button className="btn btn-primary btn-lg mx-3 px-5 py-3 mt-2" type="submit" onClick={handleOnSubmit}>
                     submit
                 </button>
